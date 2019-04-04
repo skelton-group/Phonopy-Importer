@@ -11,7 +11,9 @@ In a finite-displacement phonon calculation, a set of force-constant matrices &P
 PhonopyImporter uses the `DynmatToForceConstants` API from the Phonopy code to essentially reverse this workflow.
 The frequencies and eigenvectors from a completed phonon calculation are used to reconstruct the dynamical matrices, which are then reverse-transform to a set of force constant matrices that can be used for further post-processing with Phonopy.
 
-<img src="FlowDiagram.png" alt="FlowDiagram.png" width="500" />
+<p align="center">
+    <img src="FlowDiagram.png" alt="FlowDiagram.png" width="500" />
+</p>
 
 
 ## Installation
@@ -34,7 +36,7 @@ To install the code, clone the repository and add the root folder to the `PATH` 
 The `castep2phonopy` script reads a CASTEP .phonon file and extracts a structure (`POSCAR.vasp`) and set of force constants (`FORCE_CONSTANTS`) that can be used with Phonopy.
 
 
-```python
+```bash
 > castep2phonopy -h
 usage: castep2phonopy [-h] -s <seedname> -d <dim_1 dim_2 dim_3>
 
@@ -53,7 +55,7 @@ optional arguments:
 
 For example, to convert a &Gamma;-point CASTEP calculation output into "castep.phonon":
 
-```python
+```bash
 > castep2phonopy -s castep.phonon --dim="1 1 1"
 ```
 
