@@ -36,7 +36,7 @@ To install the code, clone the repository and add the root folder to the `PATH` 
 The `castep2phonopy` script reads a CASTEP .phonon file and extracts a structure (`POSCAR.vasp`) and set of force constants (`FORCE_CONSTANTS`) that can be used with Phonopy.
 
 
-```bash
+```
 > castep2phonopy -h
 usage: castep2phonopy [-h] -s <seedname> -d <dim_1 dim_2 dim_3>
 
@@ -55,8 +55,8 @@ optional arguments:
 
 For example, to convert a &Gamma;-point CASTEP calculation output into "castep.phonon":
 
-```bash
-> castep2phonopy -s castep.phonon --dim="1 1 1"
+```
+> castep2phonopy -s castep --dim="1 1 1"
 ```
 
 
