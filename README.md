@@ -17,7 +17,7 @@ PhonopyImporter uses the `DynmatToForceConstants` API from Phonopy to reverse th
 
 ## Installation
 
-PhonopyImporter is supplied as a Python module - `PhonopyImporter` - and a set of command-line scripts.
+PhonopyImporter is supplied as a Python module, `PhonopyImporter`, and a set of command-line scripts.
 To install the code, clone the repository and add the root folder to the `PATH` and `PYTHONPATH` variables, e.g.:
 
 ```bash
