@@ -1,0 +1,4 @@
+# Python cache files.
+
+PhonopyImporter/*.pyc
+PhonopyImporter/__pycache__/
