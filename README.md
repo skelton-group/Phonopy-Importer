@@ -1,15 +1,14 @@
 # PhonopyImporter
 
 
-This code is designed to allow codes that can perform phonon calculations to be interfaced to Phonopy for post processing.
+This code is designed to allow modelling codes that can perform phonon calculations to be interfaced to the Phonopy code[<a href="#Ref1">1</a>] for post processing.
 
 
 ## Method
 
 In a finite-displacement phonon calculation, a set of force-constant matrices &Phi;<sub><i>&alpha;&beta;</i></sub>(<i>jl</i>,<i>j'l'</i>) are computed in real space and used to construct dynamical matrices <i>D<sub>&alpha;&beta;</sub></i>(<i>jj'</i>,<b>q</b>), which when diagonalised give the vibrational frequencies &omega;(<b>q</b>,<i>v</i>) and eigenvectors <i><b>W</b></i>(<b>q</b>,<i>v</i>).
 
-PhonopyImporter uses the `DynmatToForceConstants` API from the Phonopy code to essentially reverse this workflow.
-The frequencies and eigenvectors from a completed phonon calculation are used to reconstruct the dynamical matrices, which are then reverse-transform to a set of force constant matrices that can be used for further post-processing with Phonopy.
+PhonopyImporter uses the `DynmatToForceConstants` API from Phonopy to reverse this workflow: the frequencies and eigenvectors from a completed phonon calculation are used to reconstruct the dynamical matrices, which are then reverse-transformed to a set of force constant matrices that can be used for further post-processing in Phonopy.
 
 <p align="center">
     <img src="FlowDiagram.png" alt="FlowDiagram.png" width="500" />
@@ -67,3 +66,8 @@ If you encounter bugs while using this code, please let us know - it will speed 
 
 We are also happy to take requests to support other codes that do not have a Phonopy interface.
 If you would like us to add support for another code, please let us know - again, a detailed description of the output format will be helpful.
+
+
+## References
+
+1. <a name="Ref1"></a> [https://atztogo.github.io/phonopy/](https://atztogo.github.io/phonopy/)
